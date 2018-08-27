@@ -1,0 +1,8 @@
+<p id="loading">Loading...</p>
+
+<a id="playBtn" onclick="sound.start();"><span class="btnText">sample music</span></a>
+<label id="fileWrap"><input id="file" type="file"><span class="btnText">local file<br>(mp4,mp3,m4a,etc.)</span></label>
+<a id="userMediaBtn" onclick="userMedia.start();"><span class="btnText">user microphone</span></a>
+
+<a id="stopBtn" class="hide" onclick="sound.toggle();"></a>
+<input id="volumeBtn" class="hide" type="range" min="0" max="100" value="10" onchange="sound.changeVolume(this);">

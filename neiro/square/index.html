@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+
+    <meta name="keywords" content="webGL, web audio api, canvas, audio visualizer">
+    <meta name="description" content="Audio visualizer in browse">
+
+    <!-- OGP -->
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="square | neiro">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dsflon.com/neiro/square/">
+    <meta property="og:image" content="https://dsflon.com/neiro/common/images/fb.jpg">
+    <meta property="og:description" content="Audio visualizer in browser">
+    <meta property="fb:app_id" content="966242223397117">
+    <title>square | neiro</title>
+
+    <link rel="shortcut icon" href="/neiro/common/images/favicon.ico" />
+    <link href="/neiro/common/css/common.css" rel="stylesheet">
+
+	<script src="/neiro/common/js/load.js"></script>
+	<!-- <script src="/neiro/common/js/libs/TrackballControls.js"></script> -->
+	<script src="/neiro/common/js/libs/Projector.js"></script>
+	<script src="/neiro/common/js/libs/CanvasRenderer.js"></script>
+
+    <script>
+        var SRC = "/neiro/common/music/sample01.mp4";
+        var SMOOTHING = 0.94;
+        var userAgent = window.navigator.userAgent.toLowerCase();
+        if (userAgent.indexOf('safari') != -1) {
+            var FFT_SIZE = Math.pow(2,11);
+        } else {
+            var FFT_SIZE = Math.pow(2,12);
+        }
+    </script>
+    <script src="js/min/init.min.js"></script>
+    <script src="/neiro/common/js/min/control.min.js"></script>
+	<script src="js/render.js"></script>
+	<script src="/neiro/common/js/gl_control.js"></script>
+
+    <!-- code -->
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/neiro/common/includes/code.html');?>
+    <!-- code -->
+</head>
+<body>
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/neiro/common/includes/header.html');?>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/neiro/common/includes/btns.html');?>
+    <div id="render"></div>
+    <form id="control" onsubmit="return false;">
+        <div id="controlBtn"></div>
+        <table>
+            <tr><th class="title" colspan="2">Camera</th></tr>
+            <tr>
+                <th>X</th>
+                <td>
+                    <span></span>
+                    <input id="CAMERAX" name="CAMERAX" type="range" min="0" max="2000">
+                </td>
+            </tr>
+            <tr>
+                <th>Y</th>
+                <td>
+                    <span></span>
+                    <input id="CAMERAY" name="CAMERAY" type="range" min="0" max="2000">
+                </td>
+            </tr>
+            <tr>
+                <th>Z</th>
+                <td>
+                    <span></span>
+                    <input id="CAMERAZ" name="CAMERAZ" type="range" min="0" max="2000">
+                </td>
+            </tr>
+            <tr><th class="title" colspan="2">Particles</th></tr>
+            <tr>
+                <th>Random</th>
+                <td>
+                    <span></span>
+                    <input id="RANDOM" name="RANDOM" type="range" min="0" max="100">
+                </td>
+            </tr>
+            <tr>
+                <th>Separation</th>
+                <td>
+                    <span></span>
+                    <input id="SEPARATION" name="SEPARATION" type="range" min="0" max="100">
+                </td>
+            </tr>
+            <tr>
+                <th>Amount X</th>
+                <td>
+                    <span></span>
+                    <input id="AMOUNTX" name="AMOUNTX" type="range" min="0" max="30">
+                </td>
+            </tr>
+            <tr>
+                <th>Amount Y</th>
+                <td>
+                    <span></span>
+                    <input id="AMOUNTY" name="AMOUNTY" type="range" min="0" max="30">
+                </td>
+            </tr>
+            <tr>
+                <th>Opacity</th>
+                <td>
+                    <span></span>
+                    <input id="OPACITY" name="OPACITY" type="range" step="0.05" min="0" max="1">
+                </td>
+            </tr>
+            <tr>
+                <th>Scale</th>
+                <td>
+                    <span></span>
+                    <input data-rerender="false" id="SCALE" name="SCALE" type="range" step="0.1" min="1" max="10">
+                </td>
+            </tr>
+            <tr>
+                <th>Y-axis</th>
+                <td>
+                    <span></span>
+                    <input data-rerender="false" id="YAXIS" name="YAXIS" type="range" step="0.1" min="1" max="10">
+                </td>
+            </tr>
+        </table>
+        <div class="btnWrap">
+            <div><button class="submit">Save</button></div>
+            <div><button class="reset">Reset</button></div>
+        </div>
+    </form>
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/neiro/common/includes/footer.html');?>
+</body>
+</html>

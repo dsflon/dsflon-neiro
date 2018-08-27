@@ -1,0 +1,131 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+html { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+html { overflow: auto; }
+
+body { overflow: hidden; min-width: 100%; font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif; color: #333333; font-size: 13px; font-size: 0.8125rem; line-height: 180%; }
+
+.tb { display: none; }
+
+.sp { display: none; }
+
+.pc { display: inline-block; }
+
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-text-size-adjust: 100%; }
+
+a { cursor: pointer; color: #f74902; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+a:hover { text-decoration: underline; }
+
+canvas { display: block; }
+
+img { max-width: 100%; height: auto; vertical-align: middle; }
+
+section:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+section.section { margin-top: 40px; }
+
+sup { vertical-align: super; line-height: 1; }
+
+sub { vertical-align: sub; line-height: 1; }
+
+.inner { display: block; width: 1024px; margin: 0 auto; }
+.inner:after { content: ""; display: block; clear: both; height: 0; visibility: hidden; overflow: hidden; font-size: 0.1em; line-height: 0; }
+
+.clearfix:after { content: ""; display: block; clear: both; height: 0; visibility: hidden; overflow: hidden; font-size: 0.1em; line-height: 0; }
+
+.clearfix { min-height: 1px; }
+
+* html .clearfix { height: 1px; /*\*/ /*/
+height: auto;
+overflow: hidden;
+/**/ }
+
+header #headerInner { position: fixed; top: 0; left: 0; width: 100%; height: 50px; z-index: 9999; background: rgba(255, 255, 255, 0.1); }
+header #headerInner:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+header #headerInner #logo { line-height: 1; float: left; padding: 15px; }
+header #headerInner #logo img { width: 80px; }
+header #headerInner #nav { float: right; padding: 14px 0; }
+header #headerInner #nav li { display: inline-block; }
+header #headerInner #nav li a { display: inline-block; color: #7d7d7d; padding: 0 15px 0 10px; border-right: 1px solid #cccccc; line-height: 1; font-size: 12px; }
+header #headerInner #nav li:last-child a { border: none; }
+header #headerInner #snsBox { float: right; padding: 10px 10px 10px 0px; }
+header #headerInner #snsBox li { float: right; margin: 0 2px; }
+header #headerInner #snsBox li a { display: block; width: 30px; height: 30px; text-align: center; }
+header #headerInner #snsBox li a img { transition: all 0.1s linear 0s; -webkit-transition: all 0.1s linear 0s; height: 20px; margin-top: 5px; display: block; }
+
+footer { text-align: center; font-size: 10px; color: #999; position: fixed; bottom: 0; left: 0; width: 100%; }
+
+#loading { position: fixed; bottom: 50%; left: 50%; -webkit-transform: translate(-50%, 50%); -ms-transform: translate(-50%, 50%); transform: translate(-50%, 50%); color: #999; font-size: 20px; transition: all 0.4s linear 0s; -webkit-transition: all 0.4s linear 0s; opacity: 0; }
+
+#loading.active { opacity: 1; }
+
+.btnText { line-height: 120%; display: block; position: absolute; bottom: 50%; left: 50%; width: 120px; margin: 0 0 -93px -60px; text-align: center; font-size: 12px; color: #999; line-height: 135%; }
+
+#playBtn { position: fixed; bottom: 50%; left: 50%; width: 120px; height: 120px; -webkit-transform: translate(-235%, 50%); -ms-transform: translate(-235%, 50%); transform: translate(-235%, 50%); border: 3px solid #999; border-radius: 100%; background: none; cursor: pointer; transition: all 0.4s linear 0s; -webkit-transition: all 0.4s linear 0s; background: url(../images/icons/sound.svg) no-repeat center; -webkit-background-size: 60px auto; background-size: 60px auto; }
+#playBtn:hover { opacity: 0.6; }
+#playBtn.hide { opacity: 0; pointer-events: none; }
+
+#fileWrap { position: fixed; bottom: 50%; left: 50%; width: 120px; height: 120px; -webkit-transform: translate(-50%, 50%); -ms-transform: translate(-50%, 50%); transform: translate(-50%, 50%); border: 3px solid #999; border-radius: 100%; background: none; cursor: pointer; outline: none; transition: all 0.4s linear 0s; -webkit-transition: all 0.4s linear 0s; background: url(../images/icons/upload.svg) no-repeat center; -webkit-background-size: 60px auto; background-size: 60px auto; line-height: 120%; }
+#fileWrap:hover { opacity: 0.6; }
+#fileWrap.hide { opacity: 0; pointer-events: none; }
+#fileWrap input { display: none; }
+#fileWrap span { margin-bottom: -100px; }
+
+#userMediaBtn { position: fixed; bottom: 50%; left: 50%; width: 120px; height: 120px; -webkit-transform: translate(135%, 50%); -ms-transform: translate(135%, 50%); transform: translate(135%, 50%); border: 3px solid #999; border-radius: 100%; background: none; cursor: pointer; transition: all 0.4s linear 0s; -webkit-transition: all 0.4s linear 0s; background: url(../images/icons/mic.svg) no-repeat center; -webkit-background-size: 60px auto; background-size: 60px auto; line-height: 120%; }
+#userMediaBtn:hover { opacity: 0.6; }
+#userMediaBtn.hide { opacity: 0; pointer-events: none; }
+#userMediaBtn.disabled { opacity: 0.4; pointer-events: none; }
+
+input[type="range"] { -webkit-appearance: none; vertical-align: middle; background-color: #EEE; border-radius: 24px; height: 3px; cursor: pointer; }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; cursor: pointer; position: relative; z-index: 5; border: none; width: 15px; height: 15px; background-color: #999; border-radius: 50%; -webkit-box-sizing: border-box; box-sizing: border-box; cursor: pointer; }
+input[type="range"]:focus, input[type="range"]:focus::-webkit-slider-thumb, input[type="range"]:active, input[type="range"]:active::-webkit-slider-thumb { outline: none; }
+input[type="range"]:active::-webkit-slider-thumb { background-color: #666; }
+
+#volumeBtn { position: fixed; bottom: 43px; left: 100px; transition: all 0.2s linear 0s; -webkit-transition: all 0.2s linear 0s; opacity: 1; }
+#volumeBtn.hide { bottom: -100px; opacity: 0; }
+
+#stopBtn { position: fixed; display: block; bottom: 20px; left: 20px; -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); transform: translate(0, 0); width: 60px; height: 60px; border: 3px solid #999; border-radius: 100%; transition: all 0.2s linear 0s; -webkit-transition: all 0.2s linear 0s; opacity: 1; cursor: pointer; }
+#stopBtn:hover { opacity: 0.6; }
+#stopBtn:before, #stopBtn:after { content: ""; display: block; position: absolute; top: 50%; left: 50%; -webkit-transform: rotate(0deg) translate(-50%, -50%); -ms-transform: rotate(0deg) translate(-50%, -50%); transform: rotate(0deg) translate(-50%, -50%); height: 30px; width: 6px; background: #999; border: none; margin-top: 0; transition: all 0.1s linear 0s; -webkit-transition: all 0.1s linear 0s; }
+#stopBtn.hide { opacity: 0; bottom: -100px; }
+#stopBtn:before { margin-left: -7px; }
+#stopBtn:after { margin-left: 7px; }
+#stopBtn span { display: none; }
+#stopBtn.play:before { opacity: 0; }
+#stopBtn.play:after { width: 0; height: 0; position: absolute; top: 50%; left: 50%; background: none; border-left: 16px solid transparent; border-top: 25px solid #999; border-right: 16px solid transparent; -webkit-transform: rotate(-90deg) translate(-50%, -50%); -ms-transform: rotate(-90deg) translate(-50%, -50%); transform: rotate(-90deg) translate(-50%, -50%); margin: -28px 0 0 1px; }
+
+#control { position: fixed; top: 50%; right: 0px; -webkit-transform: translate(100%, -50%); -ms-transform: translate(100%, -50%); transform: translate(100%, -50%); vertical-align: middle; color: #FFF; z-index: 9999; transition: all 0.2s ease 0s; -webkit-transition: all 0.2s ease 0s; }
+#control.active { -webkit-transform: translate(0%, -50%); -ms-transform: translate(0%, -50%); transform: translate(0%, -50%); }
+#control.active #controlBtn:before { content: "-"; }
+#control #controlBtn { background: #777; padding: 20px 0; line-height: 1; position: absolute; width: 30px; top: 0; left: -30px; cursor: pointer; text-align: center; font-size: 20px; border-radius: 3px 0 0 3px; transition: all 0.1s linear 0s; -webkit-transition: all 0.1s linear 0s; }
+#control #controlBtn:before { content: "+"; }
+#control #controlBtn:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
+#control span { display: inline-block; margin-right: 5px; }
+#control input { display: inline-block; }
+#control input[type="file"] { display: none; }
+#control th, #control td { border-bottom: 1px solid #666; }
+#control th { padding: 7px 15px 7px 25px; background: rgba(0, 0, 0, 0.8); }
+#control th.title { background: black; padding: 7px 15px; }
+#control td { background: rgba(0, 0, 0, 0.8); padding-left: 0; padding: 7px 15px 7px 0px; text-align: right; }
+#control td#fileBtn { padding-left: 10px; }
+#control td#fileBtn label { cursor: pointer; border: 1px solid #CCC; width: 100%; padding: 4px 0; display: block; text-align: center; }
+#control .btnWrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+#control .btnWrap > div { float: left; width: 50%; }
+#control button { border: none; display: block; width: 100%; padding: 10px 0; font-size: 16px; cursor: pointer; transition: all 0.1s linear 0s; -webkit-transition: all 0.1s linear 0s; border-bottom: 1px solid #999; }
+#control button:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70); opacity: 0.7; }
+#control button.submit { color: #FFF; background: #999; }
+#control button.reset { color: #999; background: #FFF; }

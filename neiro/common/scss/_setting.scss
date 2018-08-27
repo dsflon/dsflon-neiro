@@ -1,0 +1,84 @@
+
+// Font Family
+//------------------------------------------------------------------------------
+	$base_font: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	$sub_font: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+
+
+// Font Size
+//------------------------------------------------------------------------------
+	$base_font_size: 13;
+
+
+// Line height
+//------------------------------------------------------------------------------
+	$base_line_height: 180%;
+
+
+// Color
+//------------------------------------------------------------------------------
+	//Main color
+	$main_color: #f74902;
+	$sub_color: #252525;
+
+	//Link color
+	$link_color: #f74902;
+
+	//Other
+	$black: #333;
+
+	$black100: #000;
+	$black90: #333;
+	$black80: #504f4f;
+	$black70: #666;
+	$black60: #7d7d7d;
+	$black50: #999;
+	$black40: #b2b1b1;
+	$black30: #CCC;
+	$black20: #DDD;
+	$black10: #EEE;
+	$black0: #f6f5f5;
+
+	$red:#ea0a0a;
+	$blue:#2D72A7;
+	$aqua:#50a4d4;
+	$yellow:#ead805;
+	$green:#9abc50;
+
+
+// Width
+//------------------------------------------------------------------------------
+
+	//全体横幅
+	$main_width: 1024;
+
+	//サイドコンテンツ横幅
+	$side_width: 220;
+
+	//メインコンテンツとサイドコンテンツのmargin
+	$base_margin: 40;
+
+	//メインコンテンツ横幅
+	$contents_width: $main_width - $side_width - $base_margin;
+
+	// section
+	//------------------------------------------------------------------------------
+		$sectionMt: 40;
+
+
+// Break Point
+//------------------------------------------------------------------------------
+
+	$pc_width: 1024;
+	$tb_width: 768;
+	$sp_width: 640;
+
+
+// Column Width
+//------------------------------------------------------------------------------
+
+	//カラム間margin
+	$baseGutter: 20;//px
+
+	//カラム Margin Bottom
+	$colMargin: 0;//px

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+
+    <!-- OGP -->
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="neiro">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dsflon.com/neiro/index.html">
+    <meta property="og:image" content="https://dsflon.com/neiro/common/images/fb.jpg">
+    <meta property="og:description" content="neiro">
+    <title>neiro</title>
+
+    <link rel="shortcut icon" href="/neiro/common/images/favicon.ico" />
+    <link href="/neiro/common/css/common.css" rel="stylesheet">
+
+    <script src="/neiro/common/js/common.js"></script>
+    <script>
+        var SRC = "/neiro/common/music/classic.mp4";
+        var SMOOTHING = 0.92;
+        var FFT_SIZE = Math.pow(2,11);
+    </script>
+    <script src="/neiro/common/js/min/init.min.js"></script>
+    <script src="/neiro/common/js/min/control.min.js"></script>
+    <script src="/neiro/common/js/min/render.min.js"></script>
+
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/neiro/common/includes/code.html');?>
+</head>
+<body>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/neiro/common/includes/header.html');?>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/neiro/common/includes/btns.html');?>
+
+    <canvas id="visualizer" height="360" width="640"></canvas>
+
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/neiro/common/includes/footer.html');?>
+</body>
+</html>

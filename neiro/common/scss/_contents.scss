@@ -1,0 +1,220 @@
+@charset "utf-8";
+
+#loading {
+    position: fixed;
+    bottom: 50%; left: 50%;
+    transform: translate(-50%,50%);
+    color: #999;
+    font-size: 20px;
+    @include transition(0.4);
+    opacity: 0;
+}
+#loading.active {
+    opacity: 1;
+}
+
+.btnText {
+    line-height: 120%;
+    display: block;
+    position: absolute;
+    bottom: 50%; left: 50%;
+    width: 120px;
+    margin: 0 0 -93px -60px;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    line-height: 135%;
+}
+
+
+// ---------------------------------------------------------------------------
+//
+// #playBtn
+//
+// ---------------------------------------------------------------------------
+
+#playBtn {
+    position: fixed;
+    bottom: 50%; left: 50%;
+    width: 120px; height: 120px;
+    transform: translate(-235%,50%);
+    border: 3px solid #999;
+    border-radius: 100%;
+    background: none;
+    cursor: pointer;
+    @include transition(0.4);
+    background: url(../images/icons/sound.svg) no-repeat center;
+    background-size: 60px auto;
+    &:hover { opacity: 0.6; }
+    &.hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+
+// ---------------------------------------------------------------------------
+//
+// #fileWrap
+//
+// ---------------------------------------------------------------------------
+#fileWrap {
+    position: fixed;
+    bottom: 50%; left: 50%;
+    width: 120px; height: 120px;
+    transform: translate(-50%,50%);
+    border: 3px solid #999;
+    border-radius: 100%;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    @include transition(0.4);
+    background: url(../images/icons/upload.svg) no-repeat center;
+    background-size: 60px auto;
+    line-height: 120%;
+
+    &:hover { opacity: 0.6; }
+    &.hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+    input { display: none; }
+    span { margin-bottom: -100px; }
+}
+
+
+// ---------------------------------------------------------------------------
+//
+// #userMediaBtn
+//
+// ---------------------------------------------------------------------------
+#userMediaBtn {
+    position: fixed;
+    bottom: 50%; left: 50%;
+    width: 120px; height: 120px;
+    transform: translate(135%,50%);
+    border: 3px solid #999;
+    border-radius: 100%;
+    background: none;
+    cursor: pointer;
+    @include transition(0.4);
+    background: url(../images/icons/mic.svg) no-repeat center;
+    background-size: 60px auto;
+    line-height: 120%;
+    &:hover { opacity: 0.6; }
+    &.hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+    &.disabled {
+        opacity: 0.4;
+        pointer-events: none;
+    }
+}
+
+// ---------------------------------------------------------------------------
+//
+// input range
+//
+// ---------------------------------------------------------------------------
+input[type="range"] {
+    -webkit-appearance:none;
+    vertical-align:middle;
+    background-color:#EEE;
+    border-radius:24px;
+    height: 3px;
+    cursor: pointer;
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance:none;
+        cursor:pointer;
+        position:relative;
+        z-index:5;
+        border:none;
+        width: 15px;
+        height: 15px;
+        background-color: #999;
+        border-radius:50%;
+        box-sizing:border-box;
+        cursor: pointer;
+    }
+
+    &:focus,
+    &:focus::-webkit-slider-thumb,
+    &:active,
+    &:active::-webkit-slider-thumb {
+        outline:none;
+    }
+
+    &:active::-webkit-slider-thumb {
+        background-color: #666;
+    }
+
+}
+
+// ---------------------------------------------------------------------------
+//
+// #volumeBtn
+//
+// ---------------------------------------------------------------------------
+#volumeBtn {
+    position: fixed;
+    bottom: 43px; left: 100px;
+    @include transition(0.2);
+    opacity: 1;
+    &.hide {
+        bottom: -100px;
+        opacity: 0;
+    }
+}
+
+// ---------------------------------------------------------------------------
+//
+// #stopBtn
+//
+// ---------------------------------------------------------------------------
+#stopBtn {
+    position: fixed;
+    display: block;
+    bottom: 20px; left: 20px;
+    transform: translate(0,0);
+    width: 60px; height: 60px;
+    border: 3px solid #999;
+    border-radius: 100%;
+    @include transition(0.2);
+    opacity: 1;
+    cursor: pointer;
+    &:hover { opacity: 0.6; }
+    &:before,&:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: rotate(0deg) translate(-50%, -50%);
+        height: 30px; width: 6px;
+        background: #999;
+        border: none;
+        margin-top: 0;
+        @include transition(0.1);
+    }
+    &.hide {
+        opacity: 0;
+        bottom: -100px;
+    }
+    &:before { margin-left: -7px; }
+    &:after { margin-left: 7px; }
+    & span { display: none; }
+
+    &.play:before { opacity: 0; }
+    &.play:after {
+        width: 0; height: 0;
+        position: absolute;
+        top: 50%; left: 50%;
+        background: none;
+        border-left: 16px solid transparent;
+        border-top: 25px solid #999;
+        border-right: 16px solid transparent;
+        transform: rotate(-90deg) translate(-50%, -50%);
+        margin: -28px 0 0 1px;
+    }
+}
